@@ -172,56 +172,70 @@
 
 
 
-const content = document.getElementById('contentBoxThree');
-const pages = document.querySelectorAll('.pagination .page');
-const prev = document.querySelector('.pagination .prev');
-const next = document.querySelector('.pagination .next');
-let currentPage = 1;
-const itemsPerPage = 10;
-const totalItems = 50;
+// const content = document.getElementById('contentBoxThree');
+// const pages = document.querySelectorAll('.pagination .page');
+// const prev = document.querySelector('.pagination .prev');
+// const next = document.querySelector('.pagination .next');
+// let currentPage = 1;
+// const itemsPerPage = 10;
+// const totalItems = 50;
 
-function displayItems(page) {
-    content.innerHTML = '';
-    const start = (page - 1) * itemsPerPage + 1;
-    const end = page * itemsPerPage;
-    for (let i = start; i <= end && i <= totalItems; i++) {
-        const item = document.createElement('li');
-        item.textContent = `Item ${i}`;
-        content.appendChild(item);
-    }
-}
+// function displayItems(page) {
+//     content.innerHTML = '';
+//     const start = (page - 1) * itemsPerPage + 1;
+//     const end = page * itemsPerPage;
+//     for (let i = start; i <= end && i <= totalItems; i++) {
+//         const item = document.createElement('li');
+//         item.textContent = `Item ${i}`;
+//         content.appendChild(item);
+//     }
+// }
 
-function updatePagination(page) {
-    pages.forEach(p => p.classList.remove('active'));
-    pages[page - 1].classList.add('active');
-}
+// function updatePagination(page) {
+//     pages.forEach(p => p.classList.remove('active'));
+//     pages[page - 1].classList.add('active');
+// }
 
-pages.forEach((page, index) => {
-    page.addEventListener('click', () => {
-        currentPage = index + 1;
-        displayItems(currentPage);
-        updatePagination(currentPage);
-    });
-});
+// pages.forEach((page, index) => {
+//     page.addEventListener('click', () => {
+//         currentPage = index + 1;
+//         displayItems(currentPage);
+//         updatePagination(currentPage);
+//     });
+// });
 
-prev.addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--;
-        displayItems(currentPage);
-        updatePagination(currentPage);
-    }
-});
+// prev.addEventListener('click', () => {
+//     if (currentPage > 1) {
+//         currentPage--;
+//         displayItems(currentPage);
+//         updatePagination(currentPage);
+//     }
+// });
 
-next.addEventListener('click', () => {
-    if (currentPage < pages.length) {
-        currentPage++;
-        displayItems(currentPage);
-        updatePagination(currentPage);
-    }
-});
+// next.addEventListener('click', () => {
+//     if (currentPage < pages.length) {
+//         currentPage++;
+//         displayItems(currentPage);
+//         updatePagination(currentPage);
+//     }
+// });
 
-displayItems(currentPage);
-updatePagination(currentPage);
+// displayItems(currentPage);
+// updatePagination(currentPage);
+
+
+
+// Dom six 
+
+
+
+
+
+
+
+
+
+
 
 
 
